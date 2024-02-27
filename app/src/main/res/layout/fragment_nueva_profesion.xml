@@ -1,0 +1,278 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent" >
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		nueva_profesion
+     *	@date 		Thursday 08th of February 2024 12:27:08 AM
+     *	@title 		Ventanas
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <RelativeLayout
+        android:id="@+id/nueva_profesion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/polygon_2"
+            android:layout_width="411dp"
+            android:layout_height="419dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="-119dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="410dp"
+            android:contentDescription="polygon_2"
+            android:src="@drawable/polygon_2" />
+
+        <RelativeLayout
+            android:id="@+id/content_container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationX="10dp">
+
+
+            <TextView
+                android:id="@+id/ingresa_los_datos_de_tu_profesion_"
+                android:layout_width="357dp"
+                android:layout_height="79dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/ingresa_los_datos_de_tu_profesion__string"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/rectangle_5_color"
+                android:textSize="24sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/input_Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="106dp">
+
+
+                <TextView
+                    android:id="@+id/etTituloProfes"
+                    android:layout_width="343.4dp"
+                    android:layout_height="26.4dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/label_ek1_string"
+                    android:textColor="@color/rectangle_5_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/content_container_ek2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp">
+
+                        <EditText
+                            android:id="@+id/etTitulo"
+                            android:layout_width="341dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/_bg__input_ek3_shape"
+                            android:ems="10"
+                            android:hint="@string/placeholder_ek1_string"
+                            android:inputType="text" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/input_Descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="190dp">
+
+
+                <TextView
+                    android:layout_width="343.4dp"
+                    android:layout_height="26.4dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/label_string"
+                    android:textColor="@color/label_ek2_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:id="@+id/input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp">
+
+                    <EditText
+                        android:id="@+id/etDescripcion"
+                        android:layout_width="341dp"
+                        android:layout_height="185dp"
+                        android:background="@drawable/_bg__input_ek3_shape"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="@string/placeholder_string"
+                        android:inputType="textMultiLine" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/input_Entidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="410dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/text_container_ek4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/label_ek2"
+                        android:layout_width="343.4dp"
+                        android:layout_height="26.4dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/label_ek2_string"
+                        android:textColor="@color/label_ek2_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/input_entidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="30dp">
+
+                    <EditText
+                        android:id="@+id/editTextText2"
+                        android:layout_width="330dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/_bg__input_ek3_shape"
+                        android:ems="10"
+                        android:hint="@string/placeholder_ek2_string"
+                        android:inputType="text" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/documentos_respaldatorios_"
+                android:layout_width="141dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="501dp"
+                android:text="@string/documentos_respaldatorios__string"
+                android:textColor="@color/_bg__frame_botones_ek1_color"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/boton_publicar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="597dp"
+                android:layout_marginEnd="123dp">
+
+                <View
+                    android:id="@+id/imgPublicar"
+                    android:layout_width="184dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/_bg__boton_iniciar_sesion_ek1_shape" />
+
+                <TextView
+                    android:id="@+id/tvPublicar"
+                    android:layout_width="135.3dp"
+                    android:layout_height="24.86dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="24.85dp"
+                    android:layout_marginTop="12.57dp"
+                    android:gravity="center"
+                    android:text="Publicar"
+                    android:textAllCaps="true"
+                    android:textColor="@color/rectangle_5_color"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/boton_doc"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="237dp"
+                android:layout_marginTop="502dp"
+                android:layout_marginEnd="81dp">
+
+                <ImageView
+                    android:id="@+id/icon_ek3"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="icon_ek3"
+                    android:src="@drawable/icon_ek3" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="342.4dp"
+                android:layout_height="44.4dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="662dp"
+                android:text="@string/text_string"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

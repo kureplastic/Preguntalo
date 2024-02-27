@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- mi_perfil strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="nombre__apellidos_string">Nombre,  Apellidos</string>
+	<string name="tus_profesiones_string"><u>Tus Profesiones</u></string>
+	<string name="titulo_string">Titulo</string>
+	<string name="descripcion_de_la_profesion_agregada__string">descripcion de la profesion agregada.</string>
+	<string name="icon_ek5_string">check-circle</string>
+	<string name="agregar_profesion_string">Agregar Profesion</string>
+	<string name="descripcion_de_la_profesion_agregada__ek1_string">descripcion de la profesion agregada.</string>
+	<string name="titulo_ek1_string">Titulo</string>
+	<string name="email_ek2_string">micorreo@correo.com</string>
+</resources>

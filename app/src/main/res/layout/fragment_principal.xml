@@ -1,0 +1,157 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.ui.principal.PrincipalFragment">
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		vista_principal
+     *	@date 		Thursday 08th of February 2024 12:25:28 AM
+     *	@title 		Ventanas
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <ScrollView android:id="@+id/vista_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="730dp" >
+
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="730dp" >
+
+
+            <RelativeLayout
+                android:id="@+id/search"
+                android:layout_width="396dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="58dp">
+
+                <View
+                    android:id="@+id/searchfield"
+                    android:layout_width="376dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/searchfield_shape" />
+
+
+                <EditText
+                    android:id="@+id/etConsulta"
+                    android:layout_width="299dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="59dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="@string/___text_string"
+                    android:inputType="text"
+                    android:textColor="@color/___text_color"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/btSearch"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="19.88dp"
+                    android:layout_marginTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/vector"
+                        android:layout_width="15.96dp"
+                        android:layout_height="17.5dp"
+                        android:layout_marginStart="1.21dp"
+                        android:layout_marginTop="1.5dp"
+                        android:contentDescription="vector"
+                        android:src="@drawable/vector11" />
+
+                    <ImageView
+                        android:id="@+id/vector_ek1"
+                        android:layout_width="5.43dp"
+                        android:layout_height="5.85dp"
+                        android:layout_marginStart="13.55dp"
+                        android:layout_marginTop="15.15dp"
+                        android:contentDescription="vector_ek1"
+                        android:src="@drawable/vector_ek11" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView android:id="@+id/filtros"
+                android:textSize="17sp"
+                android:textColor="@color/_bg__frame_botones_ek1_color"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="126dp"
+                android:layout_width="89.7dp"
+                android:layout_height="wrap_content"
+                android:text="@string/filtros_string"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategorias"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filtros"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbars="horizontal" />
+
+            <ImageView
+                android:id="@+id/line_2"
+                android:layout_width="360dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rvCategorias"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="line_2"
+                android:src="@drawable/line_2" />
+
+            <TextView
+                android:id="@+id/tvInforme"
+                android:layout_width="405dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_2"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvConsultas"
+                android:layout_width="match_parent"
+                android:layout_height="431dp"
+                android:layout_below="@+id/tvInforme"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</ScrollView>

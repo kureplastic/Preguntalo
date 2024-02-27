@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- vista_principal strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="___text_string">Como reparar...</string>
+	<string name="filtros_string"><u>Filtros</u></string>
+	<string name="tag_string">Plomeria</string>
+	<string name="tag_ek1_string">Tramites digitales</string>
+	<string name="tag_ek2_string">Tramites digitales</string>
+	<string name="tag_ek3_string">Cocina</string>
+	<string name="_3_string">3</string>
+	<string name="_3_ek1_string">3</string>
+	<string name="_3_ek2_string">3</string>
+	<string name="titulo_de_consulta_string"><u>Titulo de consulta</u></string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="_3_ek3_string">3</string>
+	<string name="_3_ek4_string">3</string>
+	<string name="_3_ek5_string">3</string>
+	<string name="titulo_de_consulta_ek1_string"><u>Titulo de consulta</u></string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek1_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+</resources>

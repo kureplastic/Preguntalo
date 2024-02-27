@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- nueva_profesion strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="ingresa_los_datos_de_tu_profesion__string">Ingresa los datos de tu Profesion:</string>
+	<string name="label_string">Descripcion</string>
+	<string name="placeholder_string">Me dedico desde hace 5 aos a.....</string>
+	<string name="label_ek1_string">Titulo</string>
+	<string name="placeholder_ek1_string">Tecnico, Licenciado en....</string>
+	<string name="label_ek2_string">Entidad Otorgante</string>
+	<string name="placeholder_ek2_string">Universidad, Colegio de...</string>
+	<string name="documentos_respaldatorios__string">Documentos respaldatorios:</string>
+	<string name="text_string">Un moderador revisara tu solicitud para  respaldar tu informacion. </string>
+	<string name="iniciar_sesion_string">PublicaR</string>
+</resources>

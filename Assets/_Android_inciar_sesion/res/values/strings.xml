@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- inciar_sesion strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="preguntalo__string"><u>PREGUNTALO!</u></string>
+	<string name="email_ek4_string">Email</string>
+	<string name="email_ek5_string">Password</string>
+	<string name="iniciar_sesion_string">INICIAR SESION</string>
+	<string name="text_ek4_string">Inicia Sesion con Google</string>
+	<string name="text_ek5_string">No tienes cuenta? </string>
+	<string name="text_ek6_string">Registrate</string>
+	<string name="text_ek7_string">Olvide mi password</string>
+</resources>

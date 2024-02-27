@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
+	<color name="purple_200">#FFBB86FC</color>
+	<color name="purple_500">#FF6200EE</color>
+	<color name="purple_700">#FF3700B3</color>
+	<color name="teal_200">#FF03DAC5</color>
+	<color name="teal_700">#FF018786</color>
+	<color name="black">#FF000000</color>
+	<color name="white">#FFFFFFFF</color>
+
+
+	<!-- inciar_sesion colors -->
+
+	<color name="_bg__inciar_sesion_color">#F2F3F8</color>
+	<color name="preguntalo__color">#FFFFFF</color>
+	<color name="_bg__email_color">#000000</color>
+	<color name="email_ek4_color">#2D0C57</color>
+	<color name="_bg__boton_iniciar_sesion_color">#FF881F</color>
+	<color name="text_ek4_color">#344053</color>
+	<color name="text_ek5_color">#667084</color>
+	<color name="text_ek6_color">#6840C6</color>
+	<color name="_bg__mi_perfil_color">#F2F3F8</color>
+	<color name="_bg__frame_botones_ek1_color">#000000</color>
+	<color name="rectangle_5_color">#FFFFFF</color>
+	<color name="rectangle_6_color">#FF881F</color>
+	<color name="icon_ek5_color">#16B364</color>
+	<color name="icon_ek8_color">#F79009</color>
+	<color name="rectangle_10_color">#ffffff</color>
+	<color name="email_ek2_color">#2D0C57</color>
+
+	<!-- nueva_profesion colors -->
+
+	<color name="_bg__nueva_profesion_color">#F2F3F8</color>
+	<color name="rectangle_4_color">#FF881F</color>
+	<color name="placeholder_color">#667085</color>
+	<color name="_bg__line_ek1_color">#D0D5DD</color>
+	<color name="label_ek2_color">#101828</color>
+	<color name="text_color">#667084</color>
+	<color name="_bg__boton_iniciar_sesion_ek1_color">#414141</color>
+
+	<!-- mis_estadisticas colors -->
+
+	<color name="_bg__mis_estadisticas_color">#F2F3F8</color>
+	<color name="rectangle_1_color">#ffffff</color>
+	<color name="rectangle_40_color">#E4E4E4</color>
+	<color name="_bg__bar_ek1_color">#EAECF0</color>
+	<color name="_20__color">#101828</color>
+
+	<!-- nueva_consulta colors -->
+
+	<color name="_bg__nueva_consulta_color">#F2F3F8</color>
+	<color name="iniciar_sesion_color">#FFFFFF</color>
+	<color name="_bg__input_ek3_color">#F8FAFC</color>
+	<color name="chip_color">#101828</color>
+	<color name="icon_ek6_color">#475467</color>
+
+	<!-- vista_principal colors -->
+
+
+	<color name="_bg__vista_principal_color">#F2F3F8</color>
+	<color name="rectangle_55_color">#FFFFFF</color>
+	<color name="rectangle_3_color">#FF881F</color>
+	<color name="___text_color">#9586A8</color>
+	<color name="_bg___1_0_tag_ek1_color">#FFF1E4</color>
+	<color name="tag_color">#EF6820</color>
+	<color name="rectangle_12_color">#414141</color>
+	<color name="_bg____avatar_online_indicator_ek1_color">#12B669</color>
+	<color name="_bg____avatar_online_indicator_ek5_color">#CFD4DC</color>
+
+
+</resources>

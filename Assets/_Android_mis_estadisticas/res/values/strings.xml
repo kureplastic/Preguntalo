@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- mis_estadisticas strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="tu_puntuacion_actual__string">Tu Puntuacion Actual:</string>
+	<string name="_5_83_string">5.83</string>
+	<string name="algunos_de_tus_datos__string">Algunos de tus Datos:</string>
+	<string name="_20__string">22</string>
+	<string name="_20__ek1_string">20</string>
+	<string name="_60__string">60</string>
+	<string name="_40__string">44</string>
+	<string name="comentarios_positivos__string">Comentarios Positivos:</string>
+	<string name="respuestas_realizadas__string">Respuestas realizadas:</string>
+	<string name="consultas_realizadas__string">Consultas realizadas:</string>
+	<string name="respuestas_seleccionadas__string">Respuestas seleccionadas:</string>
+</resources>

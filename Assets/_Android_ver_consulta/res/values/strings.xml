@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- ver_consulta strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek1_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek2_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek3_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="_3_string">3</string>
+	<string name="_3_ek1_string">3</string>
+	<string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek4_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+	<string name="titulo_de_consulta_string"><u>Titulo de consulta</u></string>
+	<string name="respuestas_string"><u>Respuestas</u></string>
+	<string name="_3_ek2_string">3</string>
+	<string name="_3_ek3_string">3</string>
+	<string name="_3_ek4_string">3</string>
+	<string name="_3_ek5_string">3</string>
+	<string name="_3_ek6_string">3</string>
+	<string name="_3_ek7_string">3</string>
+	<string name="_3_ek8_string">3</string>
+	<string name="_3_ek9_string">3</string>
+	<string name="_3_ek10_string">3</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- mis_estadisticas colors -->
+
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
+	<color name="purple_200">#FFBB86FC</color>
+	<color name="purple_500">#FF6200EE</color>
+	<color name="purple_700">#FF3700B3</color>
+	<color name="teal_200">#FF03DAC5</color>
+	<color name="teal_700">#FF018786</color>
+	<color name="black">#FF000000</color>
+	<color name="white">#FFFFFFFF</color>
+
+	<color name="_bg__mis_estadisticas_color">#F2F3F8</color>
+	<color name="_bg__frame_botones_ek1_color">#000000</color>
+	<color name="rectangle_5_color">#FF881F</color>
+	<color name="rectangle_4_color">#FFFFFF</color>
+	<color name="rectangle_1_color">#ffffff</color>
+	<color name="rectangle_40_color">#E4E4E4</color>
+	<color name="_bg__bar_ek1_color">#EAECF0</color>
+	<color name="_20__color">#101828</color>
+</resources>

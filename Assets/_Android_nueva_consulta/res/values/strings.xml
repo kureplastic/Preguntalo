@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- nueva_consulta strings -->
+
+	<string name="app_name">Ventanas</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="iniciar_sesion_string">CreaR!</string>
+	<string name="escribe_tu_consulta_de_forma_concisa_y_sea_facil_de_entender__string">Escribe tu consulta de forma concisa y sea facil de entender:</string>
+	<string name="agrega_categorias_para_que_la_gente_encuentre_mas_rapido_tu_consulta__string">Agrega categorias para que la gente encuentre mas rapido tu consulta:</string>
+	<string name="sube_una_imagen_si_crees_que_ayuda__string">Sube una imagen si crees que ayuda:</string>
+	<string name="label_string">Descripcion</string>
+	<string name="placeholder_string">Quiero poder desarmar...</string>
+	<string name="chip_string">Tecnologia</string>
+	<string name="icon_ek1_string">times</string>
+	<string name="chip_ek1_string">Tramites</string>
+	<string name="icon_ek2_string">times</string>
+	<string name="chip_ek2_string">Carpinteria</string>
+	<string name="icon_ek3_string">times</string>
+	<string name="chip_ek3_string">Chip</string>
+	<string name="icon_ek4_string">times</string>
+	<string name="icon_ek5_string">times</string>
+	<string name="icon_ek6_string">chevron-down</string>
+	<string name="label_ek1_string">Titulo</string>
+	<string name="placeholder_ek1_string">Como desarmar...?</string>
+</resources>

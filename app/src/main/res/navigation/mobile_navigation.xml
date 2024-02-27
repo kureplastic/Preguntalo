@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_vista_principal">
+
+    <fragment
+        android:id="@+id/navigation_vista_principal"
+        android:name="com.example.preguntalo.menu.ui.principal.PrincipalFragment"
+        android:label="Vista Principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_navigation_vista_principal_to_navigation_Mostrar_Consulta"
+            app:destination="@id/navigation_Mostrar_Consulta" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_nueva_consulta"
+        android:name="com.example.preguntalo.menu.ui.consulta.ConsultaFragment"
+        android:label="Nueva Consulta"
+        tools:layout="@layout/fragment_consulta" >
+        <action
+            android:id="@+id/action_navigation_nueva_consulta_to_mostrarConsultaFragment"
+            app:destination="@id/navigation_Mostrar_Consulta" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_estadisticas"
+        android:name="com.example.preguntalo.menu.ui.estadistica.EstadisticaFragment"
+        android:label="Estadisticas"
+        tools:layout="@layout/fragment_estadistica" />
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.example.preguntalo.menu.ui.perfil.PerfilFragment"
+        android:label="Mi Perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_navigation_perfil_to_navigation_profesion"
+            app:destination="@id/navigation_profesion" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profesion"
+        android:name="com.example.preguntalo.menu.ui.perfil.NuevaProfesionFragment"
+        android:label="Nueva Profesion"
+        tools:layout="@layout/fragment_nueva_profesion">
+        <action
+            android:id="@+id/action_navigation_profesion_to_navigation_perfil"
+            app:destination="@id/navigation_perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_Mostrar_Consulta"
+        android:name="com.example.preguntalo.menu.ui.consulta.MostrarConsultaFragment"
+        android:label="Mostrar Consulta"
+        tools:layout="@layout/fragment_mostrar_consulta">
+        <action
+            android:id="@+id/action_mostrarConsultaFragment_to_navigation_nueva_consulta"
+            app:destination="@id/navigation_nueva_consulta" />
+        <action
+            android:id="@+id/action_navigation_Mostrar_Consulta_to_navigation_vista_principal"
+            app:destination="@id/navigation_vista_principal" />
+    </fragment>
+
+</navigation>

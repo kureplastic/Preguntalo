@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- inciar_sesion strings -->
+
+    <string name="app_name">Preguntalo</string>
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="preguntalo__string"><u>PREGUNTALO!</u></string>
+    <string name="email_ek4_string">Email</string>
+    <string name="email_ek5_string">Password</string>
+    <string name="iniciar_sesion_string">INICIAR SESION</string>
+    <string name="text_ek4_string">Inicia Sesion con Google</string>
+    <string name="text_ek5_string">No tienes cuenta? </string>
+    <string name="text_ek6_string">Registrate</string>
+    <string name="text_ek7_string">Olvide mi password</string>
+
+    <!-- perfil strings -->
+
+    <string name="apellidos_string">Apellidos</string>
+    <string name="nombre__string">Nombres</string>
+    <string name="tus_datos_string"><u>Tus Datos</u></string>
+    <string name="tus_profesiones_string"><u>Tus Profesiones</u></string>
+    <string name="tus_Credenciales"><u>Tus Credenciales</u></string>
+    <string name="titulo_string">Titulo</string>
+    <string name="descripcion_de_la_profesion_agregada__string">descripcion de la profesion agregada.</string>
+    <string name="icon_ek5_string">check-circle</string>
+    <string name="agregar_profesion_string">Agregar Profesion</string>
+    <string name="descripcion_de_la_profesion_agregada__ek1_string">descripcion de la profesion agregada.</string>
+    <string name="icon_ek8_string">exclamation-circle</string>
+    <string name="titulo_ek1_string">Titulo</string>
+    <string name="email_ek2_string">micorreo@correo.com</string>
+
+    <!-- nueva_profesion strings -->
+
+    <string name="ingresa_los_datos_de_tu_profesion__string">Ingresa los datos de tu Profesion:</string>
+    <string name="label_string">Descripcion</string>
+    <string name="placeholder_string">Me dedico desde hace 5 años a.....</string>
+    <string name="label_ek1_string">Titulo</string>
+    <string name="placeholder_ek1_string">Tecnico, Licenciado en....</string>
+    <string name="label_ek2_string">Entidad Otorgante</string>
+    <string name="placeholder_ek2_string">Universidad, Colegio de...</string>
+    <string name="documentos_respaldatorios__string">Documentos respaldatorios:</string>
+    <string name="text_string">Un moderador revisara tu solicitud para  respaldar tu informacion. </string>
+    <string name="publicar" tools:ignore="ExtraTranslation">Publicar</string>
+    <!-- mis_estadisticas strings -->
+
+
+    <string name="tu_puntuacion_actual__string">Tu Puntuacion Actual:</string>
+    <string name="_5_83_string">5.83</string>
+    <string name="algunos_de_tus_datos__string">Algunos de tus Datos:</string>
+    <string name="_20__string">22</string>
+    <string name="_20__ek1_string">20</string>
+    <string name="_60__string">60</string>
+    <string name="_40__string">44</string>
+    <string name="comentarios_positivos__string">Comentarios Positivos:</string>
+    <string name="respuestas_realizadas__string">Respuestas realizadas:</string>
+    <string name="consultas_realizadas__string">Consultas realizadas:</string>
+    <string name="respuestas_seleccionadas__string">Respuestas seleccionadas:</string>
+
+    <!-- nueva_consulta strings -->
+
+
+    <string name="crear_string">Crear!</string>
+    <string name="escribe_tu_consulta_de_forma_concisa_y_sea_facil_de_entender__string">Escribe tu consulta de forma concisa y sea facil de entender:</string>
+    <string name="agrega_categorias_para_que_la_gente_encuentre_mas_rapido_tu_consulta__string">Agrega categorias para que la gente encuentre mas rapido tu consulta:</string>
+    <string name="sube_una_imagen_si_crees_que_ayuda__string">Sube una imagen si crees que ayuda:</string>
+    <string name="Descripcion_string">Descripcion</string>
+    <string name="placeholder_crear_string">Como desarmar...?</string>
+    <string name="placeholder_descripcion_string">Quiero poder desarmar...</string>
+    <string name="chip_string">Tecnologia</string>
+    <string name="icon_ek1_string">times</string>
+    <string name="chip_ek1_string">Tramites</string>
+    <string name="icon_ek2_string">times</string>
+    <string name="chip_ek2_string">Carpinteria</string>
+    <string name="icon_ek3_string">times</string>
+    <string name="chip_ek3_string">Chip</string>
+    <string name="icon_ek4_string">times</string>
+    <string name="icon_times_string">times</string>
+    <string name="icon_ek6_string">chevron-down</string>
+    <string name="label_titulo_string">Titulo</string>
+    <string name="titulo_consulta"><u>Titulo De Consulta</u></string>
+    <string name="respuestas_consulta"><u>Respuestas</u></string>
+
+
+    <!-- vista_principal strings -->
+
+    <string name="___text_string">Como reparar...</string>
+    <string name="filtros_string"><u>Filtros</u></string>
+    <string name="tag_string">Plomeria</string>
+    <string name="tag_ek1_string">Tramites digitales</string>
+    <string name="tag_ek2_string">Tramites digitales</string>
+    <string name="tag_ek3_string">Cocina</string>
+    <string name="_3_string">3</string>
+    <string name="_3_ek1_string">3</string>
+    <string name="_3_ek2_string">3</string>
+    <string name="titulo_de_consulta_string"><u>Titulo de consulta</u></string>
+    <string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+    <string name="_3_ek3_string">3</string>
+    <string name="_3_ek4_string">3</string>
+    <string name="_3_ek5_string">3</string>
+    <string name="titulo_de_consulta_ek1_string"><u>Titulo de consulta</u></string>
+    <string name="lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____ek1_string">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Sed consectetur ornare...</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="titulo_vista_principal">Vista Principal</string>
+    <string name="titulo_nueva_consulta">Nueva Consulta</string>
+    <string name="titulo_estadisticas">Tus Estadisticas</string>
+    <string name="titulo_perfil">Tu Perfill</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

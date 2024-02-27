@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_vista_principal"
+        android:icon="@drawable/icon_vista_principal"
+        android:title="@string/titulo_vista_principal"/>
+    <item
+        android:id="@+id/navigation_nueva_consulta"
+        android:icon="@drawable/icon_nueva"
+        android:title="@string/titulo_nueva_consulta" />
+    <item
+        android:id="@+id/navigation_estadisticas"
+        android:icon="@drawable/icon_estad"
+        android:title="@string/titulo_estadisticas" />
+    <item
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/icon_perfil"
+        android:title="@string/titulo_perfil" />
+
+</menu>
