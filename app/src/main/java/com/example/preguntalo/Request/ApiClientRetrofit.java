@@ -47,6 +47,9 @@ public class ApiClientRetrofit {
         @POST("Usuarios/login")
         Call<String> login(@Body Usuario usuario);
 
+        @POST("Usuarios/registrar")
+        Call<Usuario> registrar(@Body Usuario usuario);
+
         @GET("Usuarios/Perfil")
         Call<Usuario> obtenerPerfil(@Header("Authorization") String token);
 

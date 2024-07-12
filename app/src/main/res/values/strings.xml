@@ -7,16 +7,22 @@
     <string name="preguntalo__string"><u>PREGUNTALO!</u></string>
     <string name="email_ek4_string">Email</string>
     <string name="email_ek5_string">Password</string>
+    <string name="email_ek6_string">Repetir Password</string>
     <string name="iniciar_sesion_string">INICIAR SESION</string>
+    <string name="registrar_string">REGISTRARSE</string>
     <string name="text_ek4_string">Inicia Sesion con Google</string>
     <string name="text_ek5_string">No tienes cuenta? </string>
+    <string name="text_cuenta_string">Ya te registraste? </string>
+    <string name="text_sesion_string">Inicia Sesion </string>
     <string name="text_ek6_string">Registrate</string>
     <string name="text_ek7_string">Olvide mi password</string>
+    <string name="text_Ingresa_datos_string">Ingresa tus datos en los campos especificados:</string>
 
     <!-- perfil strings -->
 
     <string name="apellidos_string">Apellidos</string>
     <string name="nombre__string">Nombres</string>
+    <string name="dni__string">DNI</string>
     <string name="tus_datos_string"><u>Tus Datos</u></string>
     <string name="tus_profesiones_string"><u>Tus Profesiones</u></string>
     <string name="tus_Credenciales"><u>Tus Credenciales</u></string>
@@ -41,8 +47,8 @@
     <string name="documentos_respaldatorios__string">Documentos respaldatorios:</string>
     <string name="text_string">Un moderador revisara tu solicitud para  respaldar tu informacion. </string>
     <string name="publicar" tools:ignore="ExtraTranslation">Publicar</string>
-    <!-- mis_estadisticas strings -->
 
+    <!-- mis_estadisticas strings -->
 
     <string name="tu_puntuacion_actual__string">Tu Puntuacion Actual:</string>
     <string name="_5_83_string">5.83</string>

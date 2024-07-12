@@ -1,0 +1,328 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro.RegistroActivity">
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		inciar_sesion
+     *	@date 		Wednesday 07th of February 2024 11:40:39 PM
+     *	@title 		Ventanas
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <ScrollView
+        android:id="@+id/registro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:id="@+id/_bg__inicio_sesion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/_bg__inciar_sesion_shape"
+                android:paddingStart="2dp" />
+
+            <ImageView
+                android:id="@+id/imgRectanguloCampos"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FE871F"
+                android:contentDescription="rectangle_39"
+                app:srcCompat="@drawable/_bg__boton_iniciar_sesion_shape" />
+
+            <ImageView
+                android:id="@+id/imgRectanguloFinal"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/imgRectanguloCampos"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-145dp"
+                android:layout_marginEnd="3dp"
+                android:contentDescription="rectangle_39"
+                android:src="@drawable/rectangulo_titulo"
+                app:srcCompat="@drawable/rectangulo_titulo" />
+
+            <EditText
+                android:id="@+id/etNombreRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+
+                android:hint="@string/nombre__string"
+                android:inputType="text"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color" />
+
+            <EditText
+                android:id="@+id/etApellidoRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="165dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+                android:hint="@string/apellidos_string"
+                android:inputType="text"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color" />
+
+            <EditText
+                android:id="@+id/etDNIRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="225dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+                android:hint="@string/dni__string"
+                android:inputType="number"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color" />
+
+            <EditText
+                android:id="@+id/etEmailRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="285dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+                android:hint="@string/email_ek4_string"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color" />
+
+            <EditText
+                android:id="@+id/etPasswordRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="405dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+                android:hint="@string/email_ek5_string"
+                android:inputType="textPassword"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color"
+                />
+
+            <EditText
+                android:id="@+id/etRepetirRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="465dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/__img___container"
+                android:ems="10"
+                android:gravity="center|left"
+                android:hint="@string/email_ek6_string"
+                android:inputType="textPassword"
+                android:textColor="@color/___text_color"
+                android:textColorHint="@color/___text_color"
+                />
+
+            <ImageView
+                android:id="@+id/imgLine3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="365dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="75dp"
+                android:src="@drawable/line_3" />
+
+            <RelativeLayout
+                android:id="@+id/btRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgRectanguloFinal"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="55dp"
+                android:layout_marginEnd="55dp">
+
+                <View
+                    android:id="@+id/_bg__boton_registrarse"
+                    android:layout_width="316dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/_bg__boton_iniciar_sesion_shape"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="4" />
+
+                <Button
+                    android:id="@+id/btRegistrar"
+                    android:layout_width="316dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
+                    android:text="@string/registrar_string" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/row"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="668dp"
+                android:layout_marginEnd="30dp">
+
+
+                <TextView
+                    android:id="@+id/tvSiCuenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="150dp"
+                    android:gravity="center"
+                    android:text="@string/text_cuenta_string"
+                    android:textColor="@color/text_ek5_color"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/btIniciaGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-180dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@+id/tvSiCuenta">
+
+
+                    <Button
+                        android:id="@+id/btIniciaSesion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="0dp"
+                        android:backgroundTint="#00000000"
+                        android:text="@string/text_sesion_string"
+                        android:textColor="@color/text_ek6_color"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvIngresaDatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="50dp"
+
+                android:text="@string/text_Ingresa_datos_string"
+                android:textSize="20sp"
+                android:textColor="@color/_bg___1_0_tag_ek1_color" />
+
+            <TextView
+                android:id="@+id/tvErrorRegistro"
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="339dp"
+                android:layout_marginEnd="1dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/tvPasswordErrorRegistro"
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="516dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_light" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

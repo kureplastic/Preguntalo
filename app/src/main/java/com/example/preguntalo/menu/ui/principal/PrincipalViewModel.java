@@ -2,7 +2,10 @@ package com.example.preguntalo.menu.ui.principal;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -11,6 +14,10 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.preguntalo.Modelo.Categoria;
 import com.example.preguntalo.Modelo.Consulta;
 import com.example.preguntalo.Request.ApiClientRetrofit;
+import com.example.preguntalo.login.LoginActivity;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 import java.util.List;
 
@@ -25,6 +32,7 @@ public class PrincipalViewModel extends AndroidViewModel {
     private MutableLiveData<List<Categoria>> mutableCategorias;
     private MutableLiveData<String> mutableInforme;
     private MutableLiveData<String> mutableError;
+    private MutableLiveData<Boolean> mutableDeslogueado;
     public PrincipalViewModel(@NonNull Application application) {
         super(application);
         context = application.getApplicationContext();
@@ -32,6 +40,7 @@ public class PrincipalViewModel extends AndroidViewModel {
         mutableConsultas = new MutableLiveData<>();
         mutableInforme = new MutableLiveData<>();
         mutableError = new MutableLiveData<>();
+        mutableDeslogueado = new MutableLiveData<>();
         getCategorias();
         getConsultas();
     }
@@ -42,6 +51,8 @@ public class PrincipalViewModel extends AndroidViewModel {
 
     public MutableLiveData<String> getMutableInforme() { return mutableInforme; }
     public MutableLiveData<String> getMutableError() { return mutableError; }
+
+    public MutableLiveData<Boolean> getMutableDeslogueado() { return mutableDeslogueado; }
 
     public void getCategorias(){
 
@@ -123,5 +134,31 @@ public class PrincipalViewModel extends AndroidViewModel {
                 Log.d("salida error: ","error en call de obtener consultas : "  + t);
             }
         });
+    }
+
+    public void opcionMenu(CharSequence item) {
+
+        if(item.equals("Cerrar Sesion")){
+            //borrar token de sharedpreferences
+            SharedPreferences sp = context.getSharedPreferences("token.xml", 0);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString("token", "");
+            editor.commit();
+            //cerrar actividad principal y abrir login
+            Intent intent = new Intent(context, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            //cerrar posible sesion de google
+            GoogleSignInOptions gso = new GoogleSignInOptions
+                    .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .build();
+            GoogleSignInClient client = GoogleSignIn.getClient(context, gso);
+            if(client != null){
+                client.signOut();
+            }
+            context.startActivity(intent);
+            Toast.makeText(context, "Se cerro tu sesion", Toast.LENGTH_SHORT).show();
+            mutableDeslogueado.setValue(true);
+        }
     }
 }

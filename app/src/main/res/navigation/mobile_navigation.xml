@@ -58,5 +58,14 @@
             android:id="@+id/action_navigation_Mostrar_Consulta_to_navigation_vista_principal"
             app:destination="@id/navigation_vista_principal" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_registro"
+        android:name="com.example.preguntalo.login.RegistroFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_registro" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.preguntalo.login.LoginActivity"
+        android:label="LoginActivity" />
 
 </navigation>

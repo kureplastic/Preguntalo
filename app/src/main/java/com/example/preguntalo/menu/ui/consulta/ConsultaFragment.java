@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +72,7 @@ public class ConsultaFragment extends Fragment {
             @Override
             public void onChanged(Consulta consulta) {
                 //enviar a fragment MostrarConsulta con consulta dentro de un bundle
+                Log.d("salida consulta: ",consulta.toString());
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("consulta",consulta);
                 Navigation.findNavController(getActivity(),R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_Mostrar_Consulta,bundle);

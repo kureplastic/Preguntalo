@@ -221,7 +221,7 @@
                     android:background="@drawable/_bg__boton_iniciar_sesion_ek1_shape" />
 
                 <TextView
-                    android:id="@+id/tvPublicar"
+                    android:id="@+id/tvRegistrar"
                     android:layout_width="135.3dp"
                     android:layout_height="24.86dp"
                     android:layout_gravity="center_horizontal|center"

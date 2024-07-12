@@ -28,7 +28,7 @@
             android:layout_height="wrap_content">
 
             <View
-                android:id="@+id/_bg__inciar_sesion"
+                android:id="@+id/_bg__inicio_sesion"
                 android:layout_width="match_parent"
                 android:layout_height="809dp"
                 android:layout_marginStart="0dp"
@@ -37,7 +37,7 @@
                 android:paddingStart="10dp" />
 
             <ImageView
-                android:id="@+id/imgRectanguloTitulo"
+                android:id="@+id/imgRectanguloCampos"
                 android:layout_width="match_parent"
                 android:layout_height="261dp"
                 android:layout_marginStart="0dp"
@@ -69,7 +69,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="355dp"
                 android:layout_height="58dp"
-                android:layout_below="@+id/imgRectanguloTitulo"
+                android:layout_below="@+id/imgRectanguloCampos"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="25dp"
@@ -101,7 +101,7 @@
                 android:textColor="@color/___text_color" />
 
             <RelativeLayout
-                android:id="@+id/btIniciarSesion"
+                android:id="@+id/btIniciarSesion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -115,34 +115,32 @@
                     android:id="@+id/_bg__boton_iniciar_sesion"
                     android:layout_width="316dp"
                     android:layout_height="44dp"
-                    android:shadowDx="0"
-                    android:shadowDy="4"
-                    android:shadowRadius="4"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
-                    android:background="@drawable/_bg__boton_iniciar_sesion_shape" />
+                    android:background="@drawable/_bg__boton_iniciar_sesion_shape"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="4" />
 
-                <TextView
-                    android:id="@+id/tvPublicar"
-                    android:layout_width="227.35dp"
-                    android:layout_height="24.86dp"
-                    android:layout_gravity="center_horizontal|center"
-                    android:layout_marginLeft="44.83dp"
-                    android:layout_marginTop="12.57dp"
-                    android:gravity="center"
-                    android:text="@string/iniciar_sesion_string"
-                    android:textAllCaps="true"
-                    android:textColor="@color/preguntalo__color"
-                    android:textSize="20sp" />
+                <Button
+                    android:id="@+id/btIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
+                    android:text="@string/iniciar_sesion_string" />
 
             </RelativeLayout>
 
 
             <RelativeLayout
-                android:id="@+id/btIniciaGoogle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btIniciarSesion"
+                android:id="@+id/btIniciaGoogle2"
+                android:layout_width="316dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/btIniciarSesion2"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="55dp"
@@ -150,79 +148,11 @@
                 android:layout_marginEnd="55dp">
 
 
-                <RelativeLayout
-                    android:id="@+id/social_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/_bg__social_button_ek1_shape" >
-
-                    <View
-                        android:id="@+id/_bg__social_button_ek1"
-                        android:layout_width="316dp"
-                        android:layout_height="44dp"
-                        android:layout_marginStart="-1dp"
-                        android:layout_marginTop="-1dp"
-                        android:background="@drawable/_bg__social_button_ek1_shape" />
-
-
-                    <RelativeLayout
-                        android:id="@+id/social_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="46.5dp"
-                        android:layout_marginTop="10dp">
-
-                        <ImageView
-                            android:id="@+id/vector"
-                            android:layout_width="11.53dp"
-                            android:layout_height="11.27dp"
-                            android:layout_marginStart="12.24dp"
-                            android:layout_marginTop="9.84dp"
-                            android:contentDescription="vector"
-                            android:src="@drawable/vector" />
-
-                        <ImageView
-                            android:id="@+id/vector_ek1"
-                            android:layout_width="18.68dp"
-                            android:layout_height="9.7dp"
-                            android:layout_marginStart="1.52dp"
-                            android:layout_marginTop="14.3dp"
-                            android:contentDescription="vector_ek1"
-                            android:src="@drawable/vector_ek1" />
-
-                        <ImageView
-                            android:id="@+id/vector_ek2"
-                            android:layout_width="5.26dp"
-                            android:layout_height="10.78dp"
-                            android:layout_marginStart="0.24dp"
-                            android:layout_marginTop="6.61dp"
-                            android:contentDescription="vector_ek2"
-                            android:src="@drawable/vector_ek2" />
-
-                        <ImageView
-                            android:id="@+id/vector_ek3"
-                            android:layout_width="18.75dp"
-                            android:layout_height="9.71dp"
-                            android:layout_marginStart="1.52dp"
-                            android:layout_marginTop="0dp"
-                            android:contentDescription="vector_ek3"
-                            android:src="@drawable/vector_ek3" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/tvIniciaGoogle"
-                        android:layout_width="201.6dp"
-                        android:layout_height="28.6dp"
-                        android:layout_marginLeft="82.5dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/text_ek4_string"
-                        android:textColor="@color/text_ek4_color"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
+                <com.developer.gbuttons.GoogleSignInButton
+                    android:id="@+id/btIniciaGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/text_ek4_string" />
 
             </RelativeLayout>
 
@@ -236,10 +166,11 @@
 
                 <TextView
                     android:id="@+id/tvNoCuenta"
-                    android:layout_width="133.4dp"
-                    android:layout_height="24.4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="75dp"
                     android:layout_marginTop="0dp"
+                    android:gravity="center"
                     android:text="@string/text_ek5_string"
                     android:textColor="@color/text_ek5_color"
                     android:textSize="14sp" />
@@ -249,28 +180,21 @@
                     android:id="@+id/btRegistrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="199dp"
-                    android:layout_marginTop="0dp">
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="56dp">
 
 
-                    <RelativeLayout
-                        android:id="@+id/__button_base"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="0dp">
-
-                        <TextView
-                            android:id="@+id/text_ek6"
-                            android:layout_width="82.4dp"
-                            android:layout_height="24.4dp"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
-                            android:text="@string/text_ek6_string"
-                            android:textColor="@color/text_ek6_color"
-                            android:textSize="14sp" />
-
-                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/btFormRegistrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#00FFFFFF"
+                        android:text="@string/text_ek6_string"
+                        android:textColor="@color/text_ek6_color"
+                        android:textSize="14sp" />
 
                 </RelativeLayout>
 

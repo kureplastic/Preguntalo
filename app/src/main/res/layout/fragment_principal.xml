@@ -1,4 +1,6 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".menu.ui.principal.PrincipalFragment">
@@ -19,40 +21,41 @@
     -->
     <ScrollView android:id="@+id/vista_principal"
         android:layout_width="wrap_content"
-        android:layout_height="730dp" >
+        android:layout_height="wrap_content" >
 
         <RelativeLayout android:id="@+id/content_container"
             android:layout_width="wrap_content"
-            android:layout_height="730dp" >
+            android:layout_height="wrap_content" >
 
 
             <RelativeLayout
                 android:id="@+id/search"
                 android:layout_width="396dp"
                 android:layout_height="57dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="58dp">
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="20dp">
+
 
                 <View
                     android:id="@+id/searchfield"
-                    android:layout_width="376dp"
-                    android:layout_height="57dp"
-                    android:layout_marginStart="-1dp"
-                    android:layout_marginTop="-1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/searchfield_shape" />
-
 
                 <EditText
                     android:id="@+id/etConsulta"
-                    android:layout_width="299dp"
+                    android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="59dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginEnd="19dp"
+                    android:layout_marginEnd="80dp"
                     android:layout_marginBottom="5dp"
                     android:background="@null"
                     android:ems="10"
@@ -63,10 +66,16 @@
 
                 <RelativeLayout
                     android:id="@+id/btSearch"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="19.88dp"
-                    android:layout_marginTop="12dp">
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="330dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp">
 
                     <ImageView
                         android:id="@+id/vector"
@@ -90,15 +99,19 @@
 
             </RelativeLayout>
 
-            <TextView android:id="@+id/filtros"
-                android:textSize="17sp"
-                android:textColor="@color/_bg__frame_botones_ek1_color"
-                android:layout_marginLeft="19dp"
-                android:layout_marginTop="126dp"
-                android:layout_width="89.7dp"
+            <TextView
+                android:id="@+id/filtros"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/search"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="302dp"
                 android:text="@string/filtros_string"
-                />
+                android:textColor="@color/_bg__frame_botones_ek1_color"
+                android:textSize="17sp" />
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -116,14 +129,13 @@
             <ImageView
                 android:id="@+id/line_2"
                 android:layout_width="360dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_below="@+id/rvCategorias"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="22dp"
-                android:layout_marginBottom="15dp"
                 android:contentDescription="line_2"
                 android:src="@drawable/line_2" />
 
@@ -135,20 +147,32 @@
                 android:layout_alignParentStart="true"
                 android:textColor="@color/black"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
                 android:gravity="center"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvConsultas"
                 android:layout_width="match_parent"
-                android:layout_height="431dp"
+                android:layout_height="400dp"
                 android:layout_below="@+id/tvInforme"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="5dp" />
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btMenuUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="325dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:clickable="true"
+                android:contentDescription="boton Menu"
+                android:src="@drawable/icon_perfil"
+                app:backgroundTint="@color/_bg__boton_iniciar_sesion_color" />
 
 
         </RelativeLayout>
