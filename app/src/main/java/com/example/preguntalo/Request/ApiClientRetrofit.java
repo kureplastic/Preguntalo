@@ -81,6 +81,9 @@ public class ApiClientRetrofit {
         @FormUrlEncoded
         @POST("Consultas/ObtenerPorTitulo")
         Call<List<Consulta>> obtenerPorTitulo(@Header("Authorization")String token, @Field("busqueda") String busqueda);
+
+        @GET("Consultas/ObtenerPorUsuario")
+        Call<List<Consulta>> obtenerPorUsuario(@Header("Authorization")String token);
         @POST("Respuestas/Crear")
         Call<Respuesta> crearRespuesta(@Header("Authorization")String token,@Body Respuesta respuesta);
     }

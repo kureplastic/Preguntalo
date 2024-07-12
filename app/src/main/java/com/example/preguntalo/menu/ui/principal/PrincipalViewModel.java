@@ -136,6 +136,32 @@ public class PrincipalViewModel extends AndroidViewModel {
         });
     }
 
+    public void getMisConsultas(){
+        ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
+        Call<List<Consulta>> call = end.obtenerPorUsuario(context.getSharedPreferences("token.xml",0).getString("token",""));
+
+        call.enqueue(new Callback<List<Consulta>>() {
+            @Override
+            public void onResponse(Call<List<Consulta>> call, Response<List<Consulta>> response) {
+                if(response.isSuccessful()){
+                    List <Consulta> consultas = response.body();
+                    mutableConsultas.postValue(consultas);
+                    if(consultas.isEmpty()){
+                        mutableInforme.postValue("No tienes consultas aun");
+                    }
+                    mutableInforme.postValue("Tienes "+consultas.size()+" consultas creadas");
+                }else{
+                    Log.d("salida error: ","al traer mis consultas se obtuvo: "  + response);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Consulta>> call, Throwable t) {
+                Log.d("salida error: ","error en call de obtener mis consultas: "  + t);
+            }
+        });
+    }
+
     public void opcionMenu(CharSequence item) {
 
         if(item.equals("Cerrar Sesion")){
@@ -159,6 +185,9 @@ public class PrincipalViewModel extends AndroidViewModel {
             context.startActivity(intent);
             Toast.makeText(context, "Se cerro tu sesion", Toast.LENGTH_SHORT).show();
             mutableDeslogueado.setValue(true);
+        }
+        if(item.equals("Mis Consultas")){
+            getMisConsultas();
         }
     }
 }
