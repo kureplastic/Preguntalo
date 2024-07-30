@@ -154,12 +154,13 @@
                     android:text="@string/_20__ek1_string"
                     android:textColor="@color/_20__color"
                     android:textSize="14sp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle_40"
                     app:layout_constraintEnd_toEndOf="@+id/rectangle_40"
-                    app:layout_constraintHorizontal_bias="0.807"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/consultas_realizadas"
                     app:layout_constraintTop_toTopOf="@+id/rectangle_40"
-                    app:layout_constraintVertical_bias="0.091" />
+                    app:layout_constraintVertical_bias="0.089" />
 
                 <TextView
                     android:id="@+id/respuestas_realizadas"
@@ -184,9 +185,10 @@
                     android:text="@string/_60__string"
                     android:textColor="@color/_20__color"
                     android:textSize="14sp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle_40"
                     app:layout_constraintEnd_toEndOf="@+id/rectangle_40"
-                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/respuestas_realizadas"
                     app:layout_constraintTop_toBottomOf="@+id/holderConsultasR"
                     app:layout_constraintVertical_bias="0.0" />
@@ -214,9 +216,10 @@
                     android:text="@string/_20__string"
                     android:textColor="@color/_20__color"
                     android:textSize="14sp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle_40"
                     app:layout_constraintEnd_toEndOf="@+id/rectangle_40"
-                    app:layout_constraintHorizontal_bias="0.732"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/respuestas_seleccionadas"
                     app:layout_constraintTop_toBottomOf="@+id/holderRespR"
                     app:layout_constraintVertical_bias="0.022" />
@@ -244,12 +247,13 @@
                     android:text="@string/_40__string"
                     android:textColor="@color/_20__color"
                     android:textSize="14sp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle_40"
                     app:layout_constraintEnd_toEndOf="@+id/rectangle_40"
-                    app:layout_constraintHorizontal_bias="0.787"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/comentarios_positivos"
                     app:layout_constraintTop_toBottomOf="@+id/holderRespS"
-                    app:layout_constraintVertical_bias="0.021" />
+                    app:layout_constraintVertical_bias="0.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
