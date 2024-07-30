@@ -8,20 +8,34 @@
     android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
     app:cardCornerRadius="20dp"
     app:cardElevation="5dp"
-    app:cardUseCompatPadding="true"
-    app:contentPadding="1dp">
+    app:cardUseCompatPadding="true">
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/btCategoria"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
+        android:elevation="5dp"
+        android:padding="1dp"
+        android:text="Categoria"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:cornerRadius="20dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btCat"
+        android:id="@+id/container_comentario"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/tvCategoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Categoria"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

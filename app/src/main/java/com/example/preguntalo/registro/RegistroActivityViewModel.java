@@ -85,6 +85,7 @@ public class RegistroActivityViewModel extends AndroidViewModel {
                     }
                     else {
                         mutableEmailError.setValue("Ya existe un usuario con ese email");
+                        Log.d("salida error: ", "al registrar se obtuvo: " + response);
                     }
                 }
 

@@ -10,26 +10,15 @@ public class Usuario {
     private String dni;
     private String email;
     private String password;
-    private String foto_perfil;
+    private String fotoPerfil;
     private Rating rating;
+    private int ratingId;
+    private int validacionId;
     private Validacion validacion;
 
     public Usuario() {
-        this.rating = new Rating();
-        this.validacion = new Validacion();
     }
 
-    public Usuario(int id, String apellido, String nombre, String dni, String email, String password, String foto_perfil) {
-        this.id = id;
-        this.apellido = apellido;
-        this.nombre = nombre;
-        this.dni = dni;
-        this.email = email;
-        this.password = password;
-        this.foto_perfil = foto_perfil;
-        this.rating = new Rating();
-        this.validacion = new Validacion();
-    }
 
     public Usuario(String Email, String Password) {
         this.email = Email;
@@ -37,9 +26,27 @@ public class Usuario {
         this.apellido = "";
         this.nombre = "";
         this.dni = "";
-        this.foto_perfil = "";
+        this.fotoPerfil = "";
         this.rating = new Rating();
         this.validacion = new Validacion();
+        this.ratingId = 0;
+        this.validacionId = 0;
+    }
+
+    public int getRatingId() {
+        return ratingId;
+    }
+
+    public void setRatingId(int ratingId) {
+        this.ratingId = ratingId;
+    }
+
+    public int getValidacionId() {
+        return validacionId;
+    }
+
+    public void setValidacionId(int validacionId) {
+        this.validacionId = validacionId;
     }
 
     public int getId() {
@@ -90,12 +97,12 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getFoto_perfil() {
-        return foto_perfil;
+    public String getFotoPerfil() {
+        return fotoPerfil;
     }
 
-    public void setFoto_perfil(String foto_perfil) {
-        this.foto_perfil = foto_perfil;
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
     }
 
     public Rating getRating() {

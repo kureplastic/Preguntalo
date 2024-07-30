@@ -47,17 +47,17 @@ public class MenuActivity extends AppCompatActivity {
         //NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);;
 
-        // Listener for reselection of the same tab
+        // Listener para re seleccionar el mismo valor
         navView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
-                // Re-navigate to the same fragment
+                // navegar nuevamente al mismo fragment
                 navController.popBackStack(item.getItemId(), true);
                 navController.navigate(item.getItemId());
             }
         });
 
-        // Listener for selecting different tabs
+        // Listener para seleccionar diferentes items
         navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

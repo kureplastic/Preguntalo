@@ -14,17 +14,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardBackgroundColor="@color/_bg__boton_iniciar_sesion_color"
+            app:cardCornerRadius="250dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintHorizontal_bias="0.008"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
-            app:srcCompat="@drawable/image" />
+            app:layout_constraintVertical_bias="0.037" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardBackgroundColor="@color/black"
+                android:layout_gravity="center"
+                app:cardCornerRadius="250dp">
+
+                <ImageView
+                    android:id="@+id/imgFotoPerfilConsulta"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/defaultpfp" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_consulta"
@@ -41,42 +58,40 @@
             app:layout_constraintVertical_bias="0.0">
 
             <ImageButton
-                android:id="@+id/btUpvote"
+                android:id="@+id/btUpvoteRespueta"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/_bg__email_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.119"
-                app:layout_constraintStart_toEndOf="@+id/btResponder"
+                app:layout_constraintStart_toEndOf="@+id/btResponderRespuesta"
                 app:layout_constraintTop_toBottomOf="@+id/container_texto"
                 app:layout_constraintVertical_bias="0.13"
                 app:srcCompat="@drawable/icon_ek31" />
 
             <ImageButton
-                android:id="@+id/btDownvote"
+                android:id="@+id/btDownvoteConsulta"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/_bg__email_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.291"
-                app:layout_constraintStart_toEndOf="@+id/btUpvote"
+                app:layout_constraintStart_toEndOf="@+id/btUpvoteRespueta"
                 app:layout_constraintTop_toBottomOf="@+id/container_texto"
                 app:layout_constraintVertical_bias="0.13"
                 app:srcCompat="@drawable/icon_ek41" />
 
             <ImageButton
-                android:id="@+id/btResponder"
+                android:id="@+id/btResponderRespuesta"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/_bg__email_color"
+                android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.509"
@@ -86,7 +101,7 @@
                 app:srcCompat="@drawable/icon_ek21" />
 
             <TextView
-                android:id="@+id/tvUpVote"
+                android:id="@+id/tvUpvoteRespuesta"
                 android:layout_width="25dp"
                 android:layout_height="15dp"
                 android:background="@drawable/ellipse_2_shape"
@@ -95,15 +110,15 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="@+id/btUpvote"
-                app:layout_constraintEnd_toEndOf="@+id/btUpvote"
+                app:layout_constraintBottom_toBottomOf="@+id/btUpvoteRespueta"
+                app:layout_constraintEnd_toEndOf="@+id/btUpvoteRespueta"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/btUpvote"
-                app:layout_constraintTop_toTopOf="@+id/btUpvote"
+                app:layout_constraintStart_toStartOf="@+id/btUpvoteRespueta"
+                app:layout_constraintTop_toTopOf="@+id/btUpvoteRespueta"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/tvDownvote"
+                android:id="@+id/tvDownvoteRespuesta"
                 android:layout_width="25dp"
                 android:layout_height="15dp"
                 android:background="@drawable/ellipse_2_shape"
@@ -112,11 +127,11 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="@+id/btDownvote"
-                app:layout_constraintEnd_toEndOf="@+id/btDownvote"
+                app:layout_constraintBottom_toBottomOf="@+id/btDownvoteConsulta"
+                app:layout_constraintEnd_toEndOf="@+id/btDownvoteConsulta"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/btDownvote"
-                app:layout_constraintTop_toTopOf="@+id/btDownvote"
+                app:layout_constraintStart_toStartOf="@+id/btDownvoteConsulta"
+                app:layout_constraintTop_toTopOf="@+id/btDownvoteConsulta"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView

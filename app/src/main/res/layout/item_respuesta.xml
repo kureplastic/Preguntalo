@@ -2,57 +2,105 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="330dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/rectangle_12_color"
     app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="2dp">
+    app:contentPadding="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_respuesta"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rectangle_12_ek1_shape"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/_bg__boton_iniciar_sesion_color"
+            app:cardCornerRadius="250dp"
+            app:layout_constraintEnd_toStartOf="@+id/container_texto"
+            app:layout_constraintHorizontal_bias="0.368"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.043"
-            app:srcCompat="@drawable/image" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="250dp">
+
+                <ImageView
+                    android:id="@+id/imgFotoPerfilRespuesta"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/defaultpfp" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/etComentar"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/__img___container"
+            android:ems="10"
+            android:hint="Comenta a esta respuesta:"
+            android:inputType="textMultiLine"
+            android:textSize="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btUpvoteRespueta" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_texto"
-            android:layout_width="235dp"
-            android:layout_height="wrap_content"
+            android:layout_width="261dp"
+            android:layout_height="97dp"
             android:background="@drawable/rectangle_13_ek1_shape"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.272"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.898"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.052">
+            app:layout_constraintVertical_bias="0.053">
+
+            <EditText
+                android:id="@+id/etEditarRespuesta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/_bg__boton_iniciar_sesion_ek1_color"
+                android:ems="10"
+                android:gravity="left"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="45dp" />
 
             <TextView
                 android:id="@+id/tvTextoConsulta"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:gravity="left|center"
                 android:text="@string/lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____string"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.156"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,59 +112,76 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btUpvote">
+            app:layout_constraintTop_toBottomOf="@+id/etComentar">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvRespuestas2"
+                android:id="@+id/rvComentarios"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageButton
-            android:id="@+id/btResponder"
+            android:id="@+id/btElegirRespuesta"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/_bg__email_color"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/avatar_online_indicator_ek1_color"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.438"
+            app:layout_constraintHorizontal_bias="0.422"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/container_texto"
-            app:layout_constraintVertical_bias="0.055"
-            app:srcCompat="@drawable/icon_ek21" />
+            app:layout_constraintVertical_bias="0.116"
+            app:srcCompat="@drawable/icon_success_mini" />
 
         <ImageButton
-            android:id="@+id/btDownvote"
+            android:id="@+id/btUpvoteRespueta"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/_bg__email_color"
+            android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.153"
-            app:layout_constraintStart_toEndOf="@+id/btUpvote"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btResponderRespuesta"
             app:layout_constraintTop_toBottomOf="@+id/container_texto"
-            app:layout_constraintVertical_bias="0.055"
+            app:layout_constraintVertical_bias="0.116"
+            app:srcCompat="@drawable/icon_ek31" />
+
+        <ImageButton
+            android:id="@+id/btDownvoteConsulta"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btUpvoteRespueta"
+            app:layout_constraintTop_toBottomOf="@+id/container_texto"
+            app:layout_constraintVertical_bias="0.116"
             app:srcCompat="@drawable/icon_ek41" />
 
         <ImageButton
-            android:id="@+id/btUpvote"
+            android:id="@+id/btResponderRespuesta"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/_bg__email_color"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.114"
-            app:layout_constraintStart_toEndOf="@+id/btResponder"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/container_texto"
-            app:layout_constraintVertical_bias="0.055"
-            app:srcCompat="@drawable/icon_ek31" />
+            app:layout_constraintVertical_bias="0.116"
+            app:srcCompat="@drawable/icon_ek21" />
 
         <TextView
-            android:id="@+id/tvUpVote"
+            android:id="@+id/tvUpvoteRespuesta"
             android:layout_width="25dp"
             android:layout_height="15dp"
             android:background="@drawable/ellipse_2_shape"
@@ -124,15 +189,15 @@
             android:text="105"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btUpvote"
-            app:layout_constraintEnd_toEndOf="@+id/btUpvote"
+            app:layout_constraintBottom_toBottomOf="@+id/btUpvoteRespueta"
+            app:layout_constraintEnd_toEndOf="@+id/btUpvoteRespueta"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btUpvote"
-            app:layout_constraintTop_toTopOf="@+id/btUpvote"
+            app:layout_constraintStart_toStartOf="@+id/btUpvoteRespueta"
+            app:layout_constraintTop_toTopOf="@+id/btUpvoteRespueta"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/tvDownvote"
+            android:id="@+id/tvDownvoteRespuesta"
             android:layout_width="25dp"
             android:layout_height="15dp"
             android:background="@drawable/ellipse_2_shape"
@@ -140,12 +205,38 @@
             android:text="105"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btDownvote"
-            app:layout_constraintEnd_toEndOf="@+id/btDownvote"
+            app:layout_constraintBottom_toBottomOf="@+id/btDownvoteConsulta"
+            app:layout_constraintEnd_toEndOf="@+id/btDownvoteConsulta"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btDownvote"
-            app:layout_constraintTop_toTopOf="@+id/btDownvote"
+            app:layout_constraintStart_toStartOf="@+id/btDownvoteConsulta"
+            app:layout_constraintTop_toTopOf="@+id/btDownvoteConsulta"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btEditarRespuesta"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="@color/_bg__boton_iniciar_sesion_ek1_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_ek311" />
+
+        <ImageButton
+            android:id="@+id/btComentar"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toEndOf="@+id/etComentar"
+            app:layout_constraintTop_toBottomOf="@+id/btUpvoteRespueta"
+            app:srcCompat="@drawable/icon_success" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

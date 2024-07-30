@@ -10,31 +10,65 @@
     <TextView
         android:id="@+id/tvTituloConsulta"
         android:layout_width="255dp"
-        android:layout_height="124dp"
+        android:layout_height="80dp"
         android:gravity="center"
-        android:text="@string/titulo_consulta"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.007" />
 
-    <ImageView
-        android:id="@+id/imgPerfil"
-        android:layout_width="89dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/__img___avatar_profile_photo"
+    <EditText
+        android:id="@+id/etTituloConsulta"
+        android:layout_width="255dp"
+        android:layout_height="80dp"
+        android:background="@drawable/__img___container"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:padding="2dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        app:cardCornerRadius="250dp"
+        app:cardBackgroundColor="@color/_bg__boton_iniciar_sesion_color"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/black"
+            android:layout_gravity="center"
+            app:cardCornerRadius="250dp">
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/defaultpfp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imgFondo"
-        android:layout_width="358dp"
+        android:layout_width="380dp"
         android:layout_height="573dp"
         android:src="@drawable/rectangle_12_ek1_shape"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,9 +78,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.898" />
 
+    <ImageButton
+        android:id="@+id/btEliminarConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:backgroundTint="#FDF6FE"
+        android:clickable="true"
+        android:src="@drawable/icon_bin"
+        android:tooltipText="@string/eliminar_string"
+        app:layout_constraintBottom_toTopOf="@+id/imgFondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toEndOf="@+id/btEditarConsulta"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloConsulta"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btEditarConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:backgroundTint="#FDF6FE"
+        android:src="@drawable/icon_ek311negro"
+        android:tooltipText="@string/editar_string"
+        app:layout_constraintBottom_toTopOf="@+id/imgFondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloConsulta"
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/contaner_Consulta"
-        android:layout_width="334dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imgFondo"
         app:layout_constraintEnd_toEndOf="@+id/imgFondo"
@@ -55,7 +118,7 @@
         app:layout_constraintVertical_bias="0.044">
 
         <ImageButton
-            android:id="@+id/btUpVote"
+            android:id="@+id/btUpVoteConsulta"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
@@ -68,26 +131,27 @@
             app:layout_constraintTop_toBottomOf="@+id/container_texto" />
 
         <TextView
-            android:id="@+id/tvUpvote"
+            android:id="@+id/tvUpvoteConsulta"
             android:layout_width="30dp"
             android:layout_height="20dp"
             android:background="@drawable/ellipse_1_ek1_shape"
             android:gravity="center"
             android:text="130"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btUpVote"
-            app:layout_constraintEnd_toEndOf="@+id/btUpVote"
+            app:layout_constraintBottom_toBottomOf="@+id/btUpVoteConsulta"
+            app:layout_constraintEnd_toEndOf="@+id/btUpVoteConsulta"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btUpVote"
-            app:layout_constraintTop_toTopOf="@+id/btUpVote"
+            app:layout_constraintStart_toStartOf="@+id/btUpVoteConsulta"
+            app:layout_constraintTop_toTopOf="@+id/btUpVoteConsulta"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/btDownvote"
+            android:id="@+id/btDownvoteConsulta"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:src="@drawable/icon_ek41"
             android:layout_marginTop="15dp"
+            android:tooltipText="downvote"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,22 +161,22 @@
             />
 
         <TextView
-            android:id="@+id/tvDownVote"
+            android:id="@+id/tvDownVoteConsulta"
             android:layout_width="30dp"
             android:layout_height="20dp"
             android:background="@drawable/ellipse_1_ek1_shape"
             android:gravity="center"
             android:text="130"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btDownvote"
-            app:layout_constraintEnd_toEndOf="@+id/btDownvote"
+            app:layout_constraintBottom_toBottomOf="@+id/btDownvoteConsulta"
+            app:layout_constraintEnd_toEndOf="@+id/btDownvoteConsulta"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btDownvote"
-            app:layout_constraintTop_toTopOf="@+id/btDownvote"
+            app:layout_constraintStart_toStartOf="@+id/btDownvoteConsulta"
+            app:layout_constraintTop_toTopOf="@+id/btDownvoteConsulta"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btImagenGuardada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_ek4"
@@ -127,7 +191,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_texto"
-            android:layout_width="309dp"
+            android:layout_width="319dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_13_ek1_shape"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -144,19 +208,37 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text="@string/lorem_ipsum_dolor_sit_amet__consectetur_adip_iscing_elit__sed_consectetur_ornare____string"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/etContenidoConsulta"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_13_ek1_shape"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.141" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_respuesta"
-        android:layout_width="334dp"
+        android:layout_width="350dp"
         android:layout_height="405dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
@@ -176,20 +258,20 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintHorizontal_bias="0.027"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btResponde"
-            app:layout_constraintVertical_bias="0.029" />
+            app:layout_constraintVertical_bias="0.05" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvRespuestas"
-            android:layout_width="314dp"
-            android:layout_height="wrap_content"
+            android:layout_width="340dp"
+            android:layout_height="230dp"
             android:layout_marginTop="5dp"
             android:scrollbars="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvRespuestas"
             app:layout_constraintVertical_bias="0.0" />
@@ -218,6 +300,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/_bg__boton_iniciar_sesion_color"
             android:text="@string/publicar"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.931"

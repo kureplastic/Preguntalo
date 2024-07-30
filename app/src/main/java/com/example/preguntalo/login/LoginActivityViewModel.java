@@ -8,6 +8,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -83,6 +84,31 @@ public class LoginActivityViewModel extends AndroidViewModel {
                             SharedPreferences.Editor editor = sp.edit();
                             editor.putString("token", "Bearer " + response.body());
                             editor.commit();
+                            //guardar los datos del usuario en un shared preferences userdata.xml
+                            ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
+                            Call<Usuario> call2 = end.obtenerPerfil(context.getSharedPreferences("token.xml", 0).getString("token", ""));
+                            call2.enqueue(new Callback<Usuario>() {
+                                @Override
+                                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                                    if (response.isSuccessful()) {
+                                        Log.d("salida: ", "al traer los datos del usuario se obtuvo: " + response);
+                                        Usuario user = response.body();
+                                        SharedPreferences sp = context.getSharedPreferences("userdata.xml", 0);
+                                        SharedPreferences.Editor editor = sp.edit();
+                                        editor.putString("email", user.getEmail());
+                                        editor.putInt("id", user.getId());
+                                        editor.apply();
+                                    }else{
+                                        Log.d("salida error: ", "al traer los datos del usuario se obtuvo: " + response);
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<Usuario> call, Throwable t) {
+                                    Log.d("salida error: ", "error en call de obtener perfil: " + t);
+                                }
+                            });
+
                             //abrir la actividad principal
                             Intent intent = new Intent(context, MenuActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -51,6 +51,8 @@ dependencies {
             // Android 13 and below.
     implementation "androidx.credentials:credentials-play-services-auth:1.2.2"
     implementation "com.google.android.libraries.identity.googleid:googleid:<latest version>"
+    implementation 'com.google.firebase:firebase-storage:21.0.0'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -58,4 +60,5 @@ dependencies {
     implementation 'com.github.TutorialsAndroid:GButton:v1.0.19'
     implementation 'com.google.android.gms:play-services-auth:20.4.0'
     implementation "com.github.skydoves:powermenu:2.2.4"
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
 }

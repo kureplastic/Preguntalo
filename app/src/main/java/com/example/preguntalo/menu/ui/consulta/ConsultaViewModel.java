@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.preguntalo.Modelo.Categoria;
 import com.example.preguntalo.Modelo.Consulta;
+import com.example.preguntalo.Modelo.Consulta_Categoria;
 import com.example.preguntalo.Request.ApiClientRetrofit;
 
 import java.util.List;
@@ -42,7 +43,7 @@ public class ConsultaViewModel extends AndroidViewModel {
 
     public MutableLiveData<String> getMutableError() { return mutableError; }
 
-    public void crearConsulta(Consulta consulta){
+    public void crearConsulta(Consulta consulta,String categoriaSeleccionada){
         if(validarConsulta(consulta)){
             ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
             Call<Consulta> call = end.crearConsulta(context.getSharedPreferences("token.xml",0).getString("token",""),consulta);
@@ -51,8 +52,43 @@ public class ConsultaViewModel extends AndroidViewModel {
                 @Override
                 public void onResponse(Call<Consulta> call, Response<Consulta> response) {
                     if(response.isSuccessful()){
-                        mutableConsulta.postValue(response.body());
-                        Toast.makeText(context, "CONSULTA CREADA", Toast.LENGTH_SHORT).show();
+                        //si categoriaSeleccionada no es null
+                        if(categoriaSeleccionada != null){
+                            //crear nueva llamda para generar la relacion Consulta-Categoria
+                            Consulta consultaEnDB = response.body();
+                            ApiClientRetrofit.EndPointPreguntalo end2 = ApiClientRetrofit.getEndPointPreguntalo();
+                            Call<Consulta_Categoria> call2 = end2.crearRelacion(
+                                    context.getSharedPreferences("token.xml",0).getString("token",""),
+                                    consultaEnDB.getId(),
+                                    consultaEnDB.getTitulo(),
+                                    consultaEnDB.getTexto(),
+                                    categoriaSeleccionada);
+
+                            call2.enqueue(new Callback<Consulta_Categoria>() {
+                                @Override
+                                public void onResponse(Call<Consulta_Categoria> call, Response<Consulta_Categoria> response) {
+                                    if(response.isSuccessful()){
+                                        //esto quiere decir que ya se creo la consulta y la relacion
+                                        mutableConsulta.postValue(consultaEnDB);
+                                        Toast.makeText(context, "CONSULTA CREADA", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else{
+                                        mutableConsulta.postValue(consultaEnDB);
+                                        Toast.makeText(context, "ERROR AL AGREGAR LA CATEGORIA", Toast.LENGTH_SHORT).show();
+                                        Log.d("salida error: ","al crear relacion se obtuvo: "  + response);
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<Consulta_Categoria> call, Throwable t) {
+                                    Log.d("salida error: ","error en call de crear relacion : "  + t);
+                                }
+                            });
+                        }else {
+                            mutableConsulta.postValue(response.body());
+                            Toast.makeText(context, "CONSULTA CREADA", Toast.LENGTH_SHORT).show();
+                        }
+
                     }else{
                         Toast.makeText(context, "ERROR", Toast.LENGTH_SHORT).show();
                         Log.d("salida error: ","al crear consulta se obtuvo: "  + response);

@@ -11,6 +11,8 @@
 	<color name="teal_700">#FF018786</color>
 	<color name="black">#FF000000</color>
 	<color name="white">#FFFFFFFF</color>
+	<color name="fondoApp">#FDF6FE</color>
+	<color name="principal_Preguntalo">#FF881F</color>
 
 
 	<!-- inciar_sesion colors -->
@@ -68,7 +70,7 @@
 	<color name="_bg___1_0_tag_ek1_color">#FFF1E4</color>
 	<color name="tag_color">#EF6820</color>
 	<color name="rectangle_12_color">#414141</color>
-	<color name="_bg____avatar_online_indicator_ek1_color">#12B669</color>
+	<color name="avatar_online_indicator_ek1_color">#12B669</color>
 	<color name="_bg____avatar_online_indicator_ek5_color">#CFD4DC</color>
 
 

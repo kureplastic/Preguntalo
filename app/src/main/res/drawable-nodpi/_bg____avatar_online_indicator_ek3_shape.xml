@@ -4,6 +4,6 @@
 	android:shape="rectangle" >
 	<corners android:radius="4dp" />
 	<stroke android:color="#ffffff" android:width="1.5dp" />
-	<solid android:color="@color/_bg____avatar_online_indicator_ek1_color" />
+	<solid android:color="@color/avatar_online_indicator_ek1_color" />
 </shape>
 
