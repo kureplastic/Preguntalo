@@ -18,6 +18,7 @@ public class Consulta implements Serializable {
     private Respuesta respuesta;
     private int puntuacionPositiva;
     private int puntuacionNegativa;
+    private String imagenConsulta;
 
     public Consulta() {
         this.resuelto = false;
@@ -35,6 +36,14 @@ public class Consulta implements Serializable {
         this.respuesta = null;
         this.puntuacionPositiva = 0;
         this.puntuacionNegativa = 0;
+    }
+
+    public String getImagenConsulta() {
+        return imagenConsulta;
+    }
+
+    public void setImagenConsulta(String imagenConsulta) {
+        this.imagenConsulta = imagenConsulta;
     }
 
     public int getId() {

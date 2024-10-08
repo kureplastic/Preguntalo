@@ -86,6 +86,7 @@ public class PrincipalAdapter extends RecyclerView.Adapter<PrincipalAdapter.View
                                 .addItem(new PowerMenuItem("Nombre: " + usuario.getNombre() + " " + usuario.getApellido()))
                                 .addItem(new PowerMenuItem("Email: " + usuario.getEmail()))
                                 .addItem(new PowerMenuItem("Puntuacion General: " + usuario.getRating().getScore() + " pts."))
+                                .addItem((new PowerMenuItem("Profesion: " + "no tiene")))
                                 .setAnimation(MenuAnimation.SHOW_UP_CENTER)
                                 .setCircularEffect(CircularEffect.BODY)
                                 .setMenuShadow(10f)

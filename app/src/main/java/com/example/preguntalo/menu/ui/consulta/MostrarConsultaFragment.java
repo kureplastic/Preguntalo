@@ -59,7 +59,6 @@ public class MostrarConsultaFragment extends Fragment {
         mViewModel.llenarConsulta(consultaEntrante);
         mViewModel.CorroborarUsuarioPropietario(consultaEntrante);
         mViewModel.obtenerUsuario(consultaEntrante);
-        binding.btImagenGuardada.setVisibility(View.INVISIBLE);
 
         mViewModel.getMutableUsuarioPropietarioDeConsulta().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
@@ -149,6 +148,7 @@ public class MostrarConsultaFragment extends Fragment {
                             .addItem(new PowerMenuItem("Nombre: " + usuario.getNombre() + " " + usuario.getApellido()))
                             .addItem(new PowerMenuItem("Email: " + usuario.getEmail()))
                             .addItem(new PowerMenuItem("Puntuacion General: " + usuario.getRating().getScore() + " pts."))
+                            .addItem(new PowerMenuItem(("Profesion: " + "No tiene")))
                             .setAnimation(MenuAnimation.SHOW_UP_CENTER)
                             .setCircularEffect(CircularEffect.BODY)
                             .setMenuShadow(10f)
@@ -175,6 +175,29 @@ public class MostrarConsultaFragment extends Fragment {
                 binding.tvContenido.setText(consulta.getTexto());
                 binding.tvUpvoteConsulta.setText(consulta.getPuntuacionPositiva() + "");
                 binding.tvDownVoteConsulta.setText(consulta.getPuntuacionNegativa() + "");
+            }
+        });
+        mViewModel.getMutableImagen().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String tieneImagen) {
+                binding.btImagenGuardada.setVisibility(View.VISIBLE);
+                Glide.with(getContext()).load(tieneImagen).into(binding.btImagenGuardada);
+                binding.btImagenGuardada.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //abrir imagen en un powermenu
+                        PowerMenu powerMenu = new PowerMenu.Builder(getContext())
+                                .addItem(new PowerMenuItem("aca va imagen"))
+                                .setAnimation(MenuAnimation.SHOW_UP_CENTER)
+                                .setCircularEffect(CircularEffect.BODY)
+                                .setMenuShadow(10f)
+                                .setTextSize(18)
+                                .setMenuColor(ResourcesCompat.getColor(getResources(), R.color.___text_color, null))
+                                .setTextColor(getResources().getColor(android.R.color.white))
+                                .build();
+                        powerMenu.showAtCenter(binding.btImagenGuardada);
+                    }
+                });
             }
         });
 

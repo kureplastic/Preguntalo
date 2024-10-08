@@ -3,6 +3,9 @@ package com.example.preguntalo.menu.ui.consulta;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,13 +24,22 @@ import com.example.preguntalo.Modelo.Consulta;
 import com.example.preguntalo.Modelo.SharedViewModel;
 import com.example.preguntalo.R;
 import com.example.preguntalo.databinding.FragmentConsultaBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
 
 public class ConsultaFragment extends Fragment {
 
+    private static final int REQUEST_IMAGE_PICK = 2;
     private FragmentConsultaBinding binding;
     private SharedViewModel sharedViewModel;
+    ConsultaViewModel viewModel;
+
+    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("imagesConsultas");
+    final private StorageReference storageReference = FirebaseStorage.getInstance().getReference();
 
     public static ConsultaFragment newInstance() {
         return new ConsultaFragment();
@@ -37,7 +49,7 @@ public class ConsultaFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = FragmentConsultaBinding.inflate(inflater, container, false);
-        ConsultaViewModel viewModel = new ViewModelProvider(this).get(ConsultaViewModel.class);
+        viewModel = new ViewModelProvider(this).get(ConsultaViewModel.class);
         View root = binding.getRoot();
 
         GridLayoutManager grilla = new GridLayoutManager(getContext(),1,GridLayoutManager.HORIZONTAL,false);
@@ -67,6 +79,12 @@ public class ConsultaFragment extends Fragment {
                 binding.tvLimpiarCategoria.setText("X");
             }
         });
+        viewModel.getMutableImagenPerfilUri().observe(getActivity(), new Observer<Uri>() {
+            @Override
+            public void onChanged(Uri uri) {
+                binding.iconEk7.setImageURI(uri);
+            }
+        });
 
         binding.btCrear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +94,12 @@ public class ConsultaFragment extends Fragment {
                 consulta.setTitulo(binding.editTitulo.getText().toString());
                 consulta.setTexto(binding.editDescripcion.getText().toString());
                 viewModel.crearConsulta(consulta,sharedViewModel.getCategoriaSeleccionada().getValue());
+            }
+        });
+        binding.subirArchivo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.subirImagen(ConsultaFragment.this);
             }
         });
 
@@ -101,6 +125,21 @@ public class ConsultaFragment extends Fragment {
         });
 
         return root;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            switch (requestCode) {
+                case REQUEST_IMAGE_PICK:
+                    if (data != null) {
+                        Uri photoUri = data.getData();
+                        viewModel.setMutableImagenPerfilUri(photoUri);
+                    }
+                    break;
+            }
+        }
     }
 
     @Override

@@ -36,6 +36,7 @@ public class MostrarConsultaViewModel extends AndroidViewModel {
     private MutableLiveData<Usuario> mutableUsuarioObtenido;
     private MutableLiveData<Boolean> mutableUsuarioPropietarioDeConsulta;
     private MutableLiveData<Boolean> mutableConsultaEliminada;
+    private MutableLiveData<String> mutableImagen;
 
     public MostrarConsultaViewModel(@NonNull Application application) {
         super(application);
@@ -49,6 +50,7 @@ public class MostrarConsultaViewModel extends AndroidViewModel {
         mutableUsuarioObtenido = new MutableLiveData<>();
         mutableUsuarioPropietarioDeConsulta = new MutableLiveData<>();
         mutableConsultaEliminada = new MutableLiveData<>();
+        mutableImagen = new MutableLiveData<>();
         //obtener respuestas desde la llamada de la consulta
     }
 
@@ -61,6 +63,7 @@ public class MostrarConsultaViewModel extends AndroidViewModel {
     public MutableLiveData<Usuario> getMutableUsuarioObtenido() {return mutableUsuarioObtenido; }
     public MutableLiveData<Boolean> getMutableUsuarioPropietarioDeConsulta() { return mutableUsuarioPropietarioDeConsulta;   }
     public MutableLiveData<Boolean> getMutableConsultaEliminada() {return mutableConsultaEliminada;}
+    public MutableLiveData<String> getMutableImagen() {  return mutableImagen; }
 
     public void llenarConsulta(Consulta consulta) {
         ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
@@ -70,7 +73,12 @@ public class MostrarConsultaViewModel extends AndroidViewModel {
             @Override
             public void onResponse(Call<Consulta> call, Response<Consulta> response) {
                 if (response.isSuccessful()) {
-                    mutableConsulta.postValue(response.body());
+                    Consulta consulta = response.body();
+                    mutableConsulta.postValue(consulta);
+                    if(consulta.getImagenConsulta() != null){
+                        mutableImagen.setValue(consulta.getImagenConsulta());
+                    }
+
                     //obtener respuestas
                     getRespuestas(response.body());
 
@@ -238,8 +246,9 @@ public class MostrarConsultaViewModel extends AndroidViewModel {
 
     public void obtenerUsuario(Consulta consultaObtenida) {
         Usuario user = consultaObtenida.getUsuario();
+        int ratingId = user.getRatingId();
         ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
-        Call<Rating> call = end.obtenerRatingDeUsuario(context.getSharedPreferences("token.xml", 0).getString("token", ""), user.getRatingId());
+        Call<Rating> call = end.obtenerRatingDeUsuario(context.getSharedPreferences("token.xml", 0).getString("token", ""), ratingId);
         call.enqueue(new Callback<Rating>() {
             @Override
             public void onResponse(Call<Rating> call, Response<Rating> response) {

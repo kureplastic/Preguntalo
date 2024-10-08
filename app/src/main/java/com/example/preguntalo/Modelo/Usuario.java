@@ -1,6 +1,8 @@
 package com.example.preguntalo.Modelo;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     //usuario necesita un id de tipo int, un Apellido de tipo String, un Nombre de tipo String, un DNI de tipo String,
     // un email de tipo String, un Password de tipo String, un FotoPerfil de tipo String, un Objeto rating de tipo Rating
     // y un Objeto Validacion de tipo Validacion

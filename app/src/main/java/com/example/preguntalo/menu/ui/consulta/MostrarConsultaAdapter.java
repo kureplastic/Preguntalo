@@ -116,11 +116,37 @@ public class MostrarConsultaAdapter extends RecyclerView.Adapter<MostrarConsulta
                     if(response.isSuccessful()){
                         Rating rating = response.body();
                         usuarioDeRespuesta.setRating(rating);
+                        //obtener el usuario de base para mostrar info completa
+                        ApiClientRetrofit.EndPointPreguntalo end1 = ApiClientRetrofit.getEndPointPreguntalo();
+                        Call<Usuario> call1 = end1.obtenerUsuario(context.getSharedPreferences("token.xml",0).getString("token",""),16);
+                        call1.enqueue(new Callback<Usuario>() {
+                            @Override
+                            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                                if(response.isSuccessful()){
+                                    if(response.body() != null){
+                                        if(response.body().getValidacion() != null){
+                                            usuarioDeRespuesta.setValidacion(response.body().getValidacion());
+                                        }
+                                    }
+                                }
+                                else {
+                                    //Toast.makeText(context, "Error obteniendo el usuario", Toast.LENGTH_SHORT).show();
+                                    Log.d("salida error: ", "error en obtener usuario : " + response.message());
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<Usuario> call, Throwable t) {
+                                Toast.makeText(context, "error en call usuario", Toast.LENGTH_SHORT).show();
+                                Log.d("salida error: ", "error en call de obtener usuario : " + t);
+                            }
+                        });
                         //armar el powermenu button
                         PowerMenu powerMenu = new PowerMenu.Builder(context)
                                 .addItem(new PowerMenuItem("Nombre: " + usuarioDeRespuesta.getNombre() + " " + usuarioDeRespuesta.getApellido()))
                                 .addItem(new PowerMenuItem("Email: " + usuarioDeRespuesta.getEmail()))
                                 .addItem(new PowerMenuItem("Puntuacion General: " + usuarioDeRespuesta.getRating().getScore() + " pts."))
+                                .addItem(new PowerMenuItem("Profesion: " + "No tiene"))
                                 .setAnimation(MenuAnimation.SHOW_UP_CENTER)
                                 .setCircularEffect(CircularEffect.BODY)
                                 .setMenuShadow(10f)
@@ -128,6 +154,12 @@ public class MostrarConsultaAdapter extends RecyclerView.Adapter<MostrarConsulta
                                 .setMenuColor(ResourcesCompat.getColor(context.getResources(), R.color.___text_color, null))
                                 .setTextColor(context.getResources().getColor(android.R.color.white))
                                 .build();
+                        if(usuarioDeRespuesta.getValidacion() != null){
+                            Log.d("salida", "tiene profesion");
+                        }else{
+                            Log.d("salida", "no tiene profesion");
+                        }
+
 
                         holder.imgFotoPerfilRespuesta.setOnClickListener(new View.OnClickListener() {
                             @Override

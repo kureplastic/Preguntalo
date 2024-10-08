@@ -23,7 +23,7 @@
     <string name="apellidos_string">Apellidos</string>
     <string name="nombre__string">Nombres</string>
     <string name="dni__string">DNI</string>
-    <string name="tus_datos_string"><u>Tus Datos</u></string>
+    <string name="tus_datos_string"><u>Tus Datos Personales</u></string>
     <string name="tus_profesiones_string"><u>Tus Profesiones</u></string>
     <string name="tus_Credenciales"><u>Tus Credenciales</u></string>
     <string name="titulo_string">Titulo</string>

@@ -1,7 +1,10 @@
 package com.example.preguntalo.menu.ui.consulta;
 
+
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -14,6 +17,8 @@ import com.example.preguntalo.Modelo.Categoria;
 import com.example.preguntalo.Modelo.Consulta;
 import com.example.preguntalo.Modelo.Consulta_Categoria;
 import com.example.preguntalo.Request.ApiClientRetrofit;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
 
@@ -27,12 +32,15 @@ public class ConsultaViewModel extends AndroidViewModel {
     private MutableLiveData<List<Categoria>> mutableCategorias;
     private MutableLiveData<Consulta> mutableConsulta;
     private MutableLiveData<String> mutableError;
+    private MutableLiveData<Uri> mutableImagenPerfilUri;
+    private static final int REQUEST_IMAGE_PICK = 2;
     public ConsultaViewModel(@NonNull Application application) {
         super(application);
         context = application.getApplicationContext();
         mutableCategorias = new MutableLiveData<>();
         mutableConsulta = new MutableLiveData<>();
         mutableError = new MutableLiveData<>();
+        mutableImagenPerfilUri = new MutableLiveData<>();
         //obtener categorias
         getcategorias();
     }
@@ -43,8 +51,17 @@ public class ConsultaViewModel extends AndroidViewModel {
 
     public MutableLiveData<String> getMutableError() { return mutableError; }
 
+    public MutableLiveData<Uri> getMutableImagenPerfilUri() { return mutableImagenPerfilUri; }
+    public void setMutableImagenPerfilUri(Uri photoUri) { mutableImagenPerfilUri.setValue(photoUri); }
+
+
+
     public void crearConsulta(Consulta consulta,String categoriaSeleccionada){
         if(validarConsulta(consulta)){
+            //analizar si mutableImagenPerfilUri tiene valor
+            if(mutableImagenPerfilUri.getValue() != null){
+                //si tiene valor, comenzar el proceso de subida de archivo
+            }
             ApiClientRetrofit.EndPointPreguntalo end = ApiClientRetrofit.getEndPointPreguntalo();
             Call<Consulta> call = end.crearConsulta(context.getSharedPreferences("token.xml",0).getString("token",""),consulta);
 
@@ -131,5 +148,13 @@ public class ConsultaViewModel extends AndroidViewModel {
             }
         });
     }
+
+    public void subirImagen(ConsultaFragment consultaFragment) {
+        Intent photoPicker = new Intent();
+        photoPicker.setAction(Intent.ACTION_GET_CONTENT);
+        photoPicker.setType("image/*");
+        consultaFragment.startActivityForResult(photoPicker, REQUEST_IMAGE_PICK);
+    }
+
 
 }
